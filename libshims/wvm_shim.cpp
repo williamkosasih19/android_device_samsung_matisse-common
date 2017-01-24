@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2012 The Android Open Source Project
- * Copyright (C) 2012 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (C) 2017 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-#ifndef _BDROID_BUILDCFG_H
-#define _BDROID_BUILDCFG_H
-
-#define BTM_DEF_LOCAL_NAME   "Samsung Galaxy Tab 4"
-
-/* Defined if the kernel does not have support for CLOCK_BOOTTIME_ALARM */
-#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
-
-#endif
+/* MediaBufferGroup::MediaBufferGroup */
+extern "C" int _ZN7android16MediaBufferGroupC1Ej(unsigned int);
+extern "C" int _ZN7android16MediaBufferGroupC1Ev() {
+    return _ZN7android16MediaBufferGroupC1Ej(0);
+}

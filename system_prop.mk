@@ -28,7 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdcp2.rx=tz \
     ro.qualcomm.cabl=1 \
     ro.secwvk=144 \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=160
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -41,10 +41,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true
-
-# NFC
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.nfc.port=I2C
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -70,6 +66,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
+
+# USB configuration
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=adb
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0
 
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
