@@ -1,4 +1,5 @@
 allow mediaserver cameraproxy_service:service_manager find;
+allow mediaserver cameraserver_service:service_manager add;
 allow mediaserver sensorservice_service:service_manager find;
 allow mediaserver sysfs_camera:dir search;
 allow mediaserver sysfs_camera:file { getattr open read };
