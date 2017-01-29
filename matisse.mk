@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/matisse-common/matisse-common-vendor.mk)
 
+## We are a tablet, not a phone
+PRODUCT_CHARACTERISTICS := tablet
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -63,7 +66,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8226 \
-    libstlport \
+    libshim_qcopt \
     libxml2 \
     Snap
 
@@ -107,6 +110,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_ril
 
+# Ssl
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+
+# Stlport
+PRODUCT_PACKAGES += \
+    libstlport
+
+# rmt_storage
+PRODUCT_PACKAGES += \
+    libshim_rmt_storage
+    
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -115,6 +130,7 @@ PRODUCT_PACKAGES += \
     init.input.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.sec.boot.sh \
     init.target.rc \
     ueventd.qcom.rc
 
@@ -144,8 +160,8 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+   $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # common msm8226

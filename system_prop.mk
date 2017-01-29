@@ -19,6 +19,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.multiple.enabled=false \
     audio.offload.buffer.size.kb=32
 
+# Bluetooth
+    qcom.bluetooth.soc=smd
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1

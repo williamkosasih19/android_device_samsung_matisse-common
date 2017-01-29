@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project
+ * Copyright (C) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,59 +15,25 @@
  */
 
 #define CAMERA_PARAMETERS_EXTRA_C \
-const char CameraParameters::KEY_DIS[] = "dis"; \
-const char CameraParameters::DIS_DISABLE[] = "disable"; \
+const char CameraParameters::KEY_QC_SUPPORTED_DENOISE[] = "denoise-values"; \
+const char CameraParameters::KEY_QC_SUPPORTED_FACE_DETECTION[] = "face-detection-values"; \
+const char CameraParameters::KEY_QC_SUPPORTED_HFR_SIZES[] = "hfr-size-values"; \
+const char CameraParameters::KEY_QC_SUPPORTED_REDEYE_REDUCTION[] = "redeye-reduction-values"; \
+const char CameraParameters::KEY_QC_SUPPORTED_TOUCH_AF_AEC[] = "touch-af-aec-values"; \
+const char CameraParameters::KEY_QC_SUPPORTED_VIDEO_HIGH_FRAME_RATE_MODES[] = "video-hfr-values"; \
+const char CameraParameters::KEY_QC_SUPPORTED_ZSL_MODES[] = "zsl-values"; \
+const char CameraParameters::KEY_QC_VIDEO_HIGH_FRAME_RATE[] = "video-hfr"; \
+const char CameraParameters::KEY_QC_ZSL[] = "zsl"; \
 \
-const char CameraParameters::KEY_DYNAMIC_RANGE_CONTROL[] = "dynamic-range-control"; \
-const char CameraParameters::KEY_SUPPORTED_DYNAMIC_RANGE_CONTROL[] = "dynamic-range-control-values"; \
-const char CameraParameters::DRC_ON[] = "on"; \
-const char CameraParameters::DRC_OFF[] = "off"; \
-\
-const char CameraParameters::KEY_PHASE_AF[] = "phase-af"; \
-const char CameraParameters::KEY_SUPPORTED_PHASE_AF[] = "phase-af-values"; \
-const char CameraParameters::PAF_ON[] = "on"; \
-const char CameraParameters::PAF_OFF[] = "off"; \
-\
-const char CameraParameters::KEY_RT_HDR[] = "rt-hdr"; \
-const char CameraParameters::KEY_SUPPORTED_RT_HDR[] = "rt-hdr-values"; \
-const char CameraParameters::RTHDR_ON[] = "on"; \
-const char CameraParameters::RTHDR_OFF[] = "off"; \
-\
-const char CameraParameters::KEY_ZSL[] = "zsl"; \
-const char CameraParameters::ZSL_ON[] = "on"; \
-const char CameraParameters::ZSL_OFF[] = "off"; \
-\
-int CameraParameters::getInt64(__attribute__((__unused__)) const char *key) const { return -1; } \
-\
-/* LAST_LINE OF CAMERA_PARAMETERS_EXTRA_C, every line before this one *MUST* have
- * a backslash \ at the end of the line or else everything will break.
- */
 
 #define CAMERA_PARAMETERS_EXTRA_H \
-    static const char KEY_DIS[]; \
-    static const char DIS_DISABLE[]; \
+    static const char KEY_QC_SUPPORTED_DENOISE[]; \
+    static const char KEY_QC_SUPPORTED_FACE_DETECTION[]; \
+    static const char KEY_QC_SUPPORTED_HFR_SIZES[]; \
+    static const char KEY_QC_SUPPORTED_REDEYE_REDUCTION[]; \
+    static const char KEY_QC_SUPPORTED_TOUCH_AF_AEC[]; \
+    static const char KEY_QC_SUPPORTED_VIDEO_HIGH_FRAME_RATE_MODES[]; \
+    static const char KEY_QC_SUPPORTED_ZSL_MODES[]; \
+    static const char KEY_QC_VIDEO_HIGH_FRAME_RATE[]; \
+    static const char KEY_QC_ZSL[]; \
     \
-    static const char KEY_DYNAMIC_RANGE_CONTROL[]; \
-    static const char KEY_SUPPORTED_DYNAMIC_RANGE_CONTROL[]; \
-    static const char DRC_ON[]; \
-    static const char DRC_OFF[]; \
-    \
-    static const char KEY_PHASE_AF[]; \
-    static const char KEY_SUPPORTED_PHASE_AF[]; \
-    static const char PAF_ON[]; \
-    static const char PAF_OFF[]; \
-    \
-    static const char KEY_RT_HDR[]; \
-    static const char KEY_SUPPORTED_RT_HDR[]; \
-    static const char RTHDR_ON[]; \
-    static const char RTHDR_OFF[]; \
-    \
-    static const char KEY_ZSL[]; \
-    static const char ZSL_ON[]; \
-    static const char ZSL_OFF[]; \
-    \
-    int getInt64(const char *key) const; \
-    \
-    /* LAST_LINE OF CAMERA_PARAMETERS_EXTRA_H, every line before this one *MUST* have
-     * a backslash \ at the end of the line or else everything will break.
-     */
