@@ -42,7 +42,7 @@ vendor/firmware/bcm4350_V0395.0798_wisol.hcd|c4a2f642b274de774014aafacf3ed4253b0
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8974.so:lib/hw/camera.vendor.msm8974.so
+lib/hw/camera.msm8226.so:lib/hw/camera.vendor.msm8226.so
 lib/libarcsoft_nighthawk.so
 lib/libliveframework.so
 lib/libmmcamera2_stats_algorithm.so
@@ -307,7 +307,7 @@ bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
 vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
 
 # Sensors
-lib/hw/sensors.msm8974.so|48c6112bc4097e9176fcd53bf3f7ba0d643b27aa
+lib/hw/sensors.msm8226.so|48c6112bc4097e9176fcd53bf3f7ba0d643b27aa
 lib/libhr.so
 
 # Time services

@@ -28,7 +28,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdcp2.rx=tz \
     ro.qualcomm.cabl=1 \
     ro.secwvk=144 \
-    ro.sf.lcd_density=480 \
     debug.hwui.use_buffer_age=false
 
 # GPS
@@ -43,10 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true
 
-# NFC
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.nfc.port=I2C
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
@@ -59,7 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/vendor/lib/libsec-ril.so \
     ro.telephony.mms_data_profile=5 \
     ro.ril.telephony.mqanelements=6 \
-    ro.telephony.ril_class=KlteRIL
+    ro.telephony.ril_class=matisseRIL
 
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 PRODUCT_PROPERTY_OVERRIDES += \
